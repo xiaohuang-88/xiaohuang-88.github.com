@@ -100,7 +100,7 @@
 为统一管理站点中所用的图片，需要一个图床，这里采用免费的七牛云空间；具体的如何同步本地图片库与自己申请的七牛云空间中的图片库，请参见如何使用七牛云做为图床？">
 <meta property="og:image" content="http://7xved0.com1.z0.glb.clouddn.com/180.jpeg">
 <meta property="og:image" content="http://7xved0.com1.z0.glb.clouddn.com/180.jpeg">
-<meta property="og:updated_time" content="2017-06-06T10:18:38.412Z">
+<meta property="og:updated_time" content="2017-06-06T10:41:12.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Linux中利用Hexo建立自己的博客系统">
 <meta name="twitter:description" content="Hexo博客的搭建过程及使用技巧
@@ -375,9 +375,9 @@
 <p>$ ssh-keygen -t rsa -C “邮件地址@youremail.com”<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa，即为默认存放位置):&lt;回车就好&gt;</p>
 </blockquote>
 </li>
-<li><p>key文件备份，将ssh key从默认存储位置复制至Git所在文件夹中</p>
+<li><p>key文件备份:将ssh key从默认存储位置复制至Git所在文件夹中</p>
 <blockquote>
-<p>在Git软件所在文件夹\myblpg\Git中，新建.ssh文件夹<br>在windows下，需要在cmd模式下，使用md命令创建文件名前面带有.符号的文件夹<br>$ md .ssh   在当前目录下创建.ssh文件夹</p>
+<p>在Git软件所在文件夹\myblog\Git中，新建.ssh文件夹<br>在windows下，需要在cmd模式下，使用md命令创建文件名前面带有.符号的文件夹<br>$ md .ssh   在当前目录下创建.ssh文件夹</p>
 </blockquote>
 </li>
 <li><p>添加ssh key至GitHub</p>
@@ -387,20 +387,23 @@
 <li>在标题框中，添加这个新key的描述标签。例如，如果此时使用个人电脑处理Hexo博客，可将该key称为”Hexo-personal-computer”</li>
 <li>把本地生成的id_rsa.pub文件中内容，复制至key文本框中</li>
 </ul>
-<ul>
-<li>测试ssh连接和设置用户信息<blockquote>
-<p>$ ssh -T git@github.com   测试ssh连接</p>
-</blockquote>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</p>
+<li><p>测试ssh连接</p>
 <blockquote>
-<p>$ git config –global user.name //用户名<br>    $ git config –global user.email //填写自己的邮箱</p>
+<p>$ ssh -T git@github.com</p>
 </blockquote>
+</li>
+<li><p>设置用户信息</p>
+<blockquote>
+<p>$ git config –global user.name  //用户名<br>$ git config –global user.email 填写自己的邮箱</p>
+</blockquote>
+<ul>
+<li>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h3><p>常用命令：</p>
 <ul>
 <li>hexo new “postName” #新建文章</li>
